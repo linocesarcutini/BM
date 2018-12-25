@@ -1,0 +1,88 @@
+﻿<Window x:Class="BM.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BM"
+        mc:Ignorable="d"
+        Title="Bill of Material" Icon="./images/bm.ico" WindowState="Maximized" WindowStartupLocation="CenterScreen">
+
+    <Grid>
+        <Menu
+            HorizontalAlignment="Left"
+            Height="20"
+            Margin="10,10,0,0"
+            VerticalAlignment="Top"
+            Width="200">
+
+            <MenuItem
+                Header="Arquivo">
+
+                <MenuItem
+                    Header="Abrir"
+                    Click="Abrir_Click"/>
+
+                <MenuItem
+                    Header="Nova Estrutura"
+                    Click="NovaEstrutura_Click"/>
+
+            </MenuItem>
+        </Menu>
+
+        <Grid
+            HorizontalAlignment="Left"
+            Height="100"
+            Margin="10,35,0,0"
+            VerticalAlignment="Top" Width="740">
+
+            <Label
+                Content="Cliente"
+                Height="25"
+                Width="60"
+                VerticalContentAlignment="Center"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"/>
+
+            <TextBox
+                HorizontalAlignment="Left"
+                Height="25"
+                Margin="60,0,0,0"
+                TextWrapping="Wrap"
+                VerticalAlignment="Top"
+                Width="120"
+                VerticalContentAlignment="Center"/>
+
+            <Label
+                Content="O.S."
+                HorizontalAlignment="Left"
+                Margin="0,25,0,0"
+                VerticalAlignment="Top"
+                Width="60"/>
+
+            <TextBox
+                HorizontalAlignment="Left"
+                Height="25"
+                Margin="60,25,0,0"
+                TextWrapping="Wrap"
+                VerticalAlignment="Top"
+                Width="120"
+                VerticalContentAlignment="Center"/>
+
+            <Label
+                Content="Estrutura"
+                HorizontalAlignment="Left"
+                Margin="0,50,0,0"
+                VerticalAlignment="Top"
+                Width="60"/>
+
+            <TextBox
+                HorizontalAlignment="Left"
+                Height="25"
+                Margin="60,50,0,0"
+                TextWrapping="Wrap"
+                VerticalAlignment="Top"
+                Width="120"
+                VerticalContentAlignment="Center"/>
+        </Grid>
+    </Grid>
+</Window>
