@@ -5,7 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BM"
         mc:Ignorable="d"
-        Title="Bill of Material" Icon="./images/bm.ico" WindowState="Maximized" WindowStartupLocation="CenterScreen">
+        Title="Bill of Material"
+        Icon="./images/bm.ico"
+        WindowStartupLocation="CenterScreen"
+        WindowState="Maximized" Width="899">
 
     <Grid>
         <Menu
@@ -30,10 +33,11 @@
         </Menu>
 
         <Grid
+            Name="Grid_NewEstructure"
             HorizontalAlignment="Left"
-            Height="100"
-            Margin="10,35,0,0"
-            VerticalAlignment="Top" Width="740">
+            Margin="10,35,10,0"
+            VerticalAlignment="Top"
+            Height="200">
 
             <Label
                 Content="Cliente"
@@ -42,7 +46,6 @@
                 VerticalContentAlignment="Center"
                 HorizontalAlignment="Left"
                 VerticalAlignment="Top"/>
-
             <TextBox
                 HorizontalAlignment="Left"
                 Height="25"
@@ -58,7 +61,6 @@
                 Margin="0,25,0,0"
                 VerticalAlignment="Top"
                 Width="60"/>
-
             <TextBox
                 HorizontalAlignment="Left"
                 Height="25"
@@ -74,7 +76,6 @@
                 Margin="0,50,0,0"
                 VerticalAlignment="Top"
                 Width="60"/>
-
             <TextBox
                 HorizontalAlignment="Left"
                 Height="25"
@@ -83,6 +84,86 @@
                 VerticalAlignment="Top"
                 Width="120"
                 VerticalContentAlignment="Center"/>
+
+            <Label
+                Content="Obra"
+                HorizontalAlignment="Left"
+                Margin="0,75,0,0"
+                VerticalAlignment="Top"
+                Width="60"/>
+            <TextBox
+                HorizontalAlignment="Left"
+                Height="25"
+                Margin="60,75,0,0"
+                TextWrapping="Wrap"
+                VerticalAlignment="Top"
+                Width="120"
+                VerticalContentAlignment="Center"/>
+
+            <Label
+                Content="Número"
+                HorizontalAlignment="Left"
+                Margin="0,100,0,0"
+                VerticalAlignment="Top"
+                Width="60"/>
+            <TextBox
+                HorizontalAlignment="Left"
+                Height="25"
+                Margin="60,100,0,0"
+                TextWrapping="Wrap"
+                VerticalAlignment="Top"
+                Width="120"
+                VerticalContentAlignment="Center"/>
+
+            <Label
+                Content="Revisão"
+                HorizontalAlignment="Left"
+                Margin="0,125,0,0"
+                VerticalAlignment="Top"
+                Width="60"/>
+            <TextBox
+                HorizontalAlignment="Left"
+                Height="25"
+                Margin="60,125,0,0"
+                TextWrapping="Wrap"
+                VerticalAlignment="Top"
+                Width="120"
+                VerticalContentAlignment="Center"/>
+
+            <Label
+                Content="Sigla"
+                HorizontalAlignment="Left"
+                Margin="0,150,0,0"
+                VerticalAlignment="Top"
+                Width="60"/>
+            <TextBox
+                Name="tbUnicaSigla"
+                HorizontalAlignment="Left"
+                Height="25"
+                Margin="60,150,0,0"
+                TextWrapping="Wrap"
+                VerticalAlignment="Top"
+                Width="120"
+                VerticalContentAlignment="Center"/>
+            <CheckBox
+                Name="cbVariasSiglas"
+                Content="Varias"
+                Margin="185,155,500,0"
+                VerticalAlignment="Top"
+                Click="Varias_Checked"/>
+
+            <DataGrid
+                Name="dgParafusos"
+                HorizontalAlignment="Left"
+                Height="176"
+                Width="716"
+                Margin="260,0,10,0"
+                VerticalAlignment="Top"
+                MinColumnWidth="10"
+                MaxColumnWidth="100"
+                CanUserResizeColumns="True"
+                SelectionMode="Single"
+                SelectionUnit="Cell"/>
         </Grid>
     </Grid>
 </Window>

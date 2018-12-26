@@ -20,6 +20,12 @@ namespace BM {
     public partial class MainWindow : Window {
         public MainWindow() {
             InitializeComponent();
+
+            List<Bolt> bolts = new List<Bolt>();
+            //bolts.Add(new Bolt() { Diametro = "12.7", Qualidade = "T0L", QTPorca = 1, QualPorca = "GRAL",
+            //EspArruela = "3", QTArruela = "1", QualArruela = "ARPS", Palnut = "PNT" });
+
+            dgParafusos.ItemsSource = bolts;
         }
 
         private void Abrir_Click(object sender, RoutedEventArgs e) {
@@ -27,7 +33,29 @@ namespace BM {
         }
 
         private void NovaEstrutura_Click(object sender, RoutedEventArgs e) {
-            MessageBox.Show("Aqui cria nova estrutura");
+            Grid_NewEstructure.Visibility = Visibility.Hidden;
         }
+
+        private void Varias_Checked(object sender, RoutedEventArgs e) {
+            if ((bool)cbVariasSiglas.IsChecked) {
+                tbUnicaSigla.IsEnabled = false;
+            } else {
+                tbUnicaSigla.IsEnabled = true;
+            }
+        }
+    }
+
+    public class Bolt {
+        public string Diametro { get; set; }
+        public string Qualidade { get; set; }
+        public int QTPorca { get; set; }
+        public string QualPorca { get; set; }
+        public string EspArruela { get; set; }
+        public string QTArruela { get; set; }
+        public string QualArruela { get; set; }
+        public string EspArruelaP { get; set; }
+        public string QTArruelaP { get; set; }
+        public string QualArruelaP { get; set; }
+        public string Palnut { get; set; }
     }
 }
