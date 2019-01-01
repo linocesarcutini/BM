@@ -163,7 +163,9 @@
                 MaxColumnWidth="100"
                 CanUserResizeColumns="True"
                 SelectionMode="Single"
-                SelectionUnit="Cell"/>
+                SelectionUnit="Cell"
+                GridLinesVisibility="Horizontal"/>
+                <!--PreviewKeyUp="DgParafusos_previewKeyDown"-->
         </Grid>
     </Grid>
 </Window>
